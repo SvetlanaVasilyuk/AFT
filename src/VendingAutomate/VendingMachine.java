@@ -1,6 +1,5 @@
 package VendingAutomate;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,18 +7,7 @@ public class VendingMachine {
     private ArrayList <Drink> menu = new ArrayList<>();
     private int cash;
 
-    public VendingMachine() {
-    }
-
-    public ArrayList<Drink> getMenu() {
-        return menu;
-    }
-
-    public int getCash() {
-        return cash;
-    }
-
-    public void setCash(int cash) {
+    private void setCash(int cash) {
         this.cash = cash;
     }
 
@@ -27,7 +15,7 @@ public class VendingMachine {
         this.menu.add(new Drink(price, name));
     }
 
-    public void printMenu(){
+    private void printMenu(){
         System.out.println("Добро пожаловать! Ознакомьтесь с меню:");
         for (int i=0; i<menu.size(); i++){
             System.out.println("Номер напитка: " + (i+1) + "  Название: " + this.menu.get(i).getName() + "  Цена: " + this.menu.get(i).getPrice());
@@ -35,7 +23,7 @@ public class VendingMachine {
         System.out.println();
     }
 
-    public void addCash(){
+    private void addCash(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Внесите наличные: ");
         this.cash+=scanner.nextInt();
@@ -43,7 +31,7 @@ public class VendingMachine {
         System.out.println();
     }
 
-    public void giveDrinkToUser(){
+    private void giveDrinkToUser(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите номер выбранного напитка:");
         int number = scanner.nextInt();
