@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class VendingMachine {
+
     private ArrayList <Drink> menu = new ArrayList<>();
     private int cash;
 

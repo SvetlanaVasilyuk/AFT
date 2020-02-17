@@ -1,5 +1,7 @@
 package Progression;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {

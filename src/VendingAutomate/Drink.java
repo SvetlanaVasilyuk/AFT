@@ -1,7 +1,7 @@
 package VendingAutomate;
 
 public class Drink {
-    private int price;
+    private final int price;
     private String name;
 
     public Drink(int price, String name) {
