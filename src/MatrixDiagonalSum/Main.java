@@ -28,7 +28,7 @@ public class Main {
     public static int findMatrixDiagonalSum(int[][] matrix) {
         int sum = 0;
         for (int i = 0; i < matrix.length; i++) {
-            sum += matrix[i][i];
+            sum += matrix[i][i] + matrix[i][matrix.length - i - 1];
         }
         return sum;
     }
