@@ -2,14 +2,22 @@ package Animal;
 
 public class Main {
     public static void main(String[] args) {
-        Animal cat = new Cat();
-        Animal duck = new Duck();
-        Animal fish = new Fish();
-        Animal frog = new Frog();
+        Cat cat = new Cat();
+        Duck duck = new Duck();
+        Fish fish = new Fish();
+        Turtle turtle = new Turtle();
 
         cat.getName();
         duck.getName();
         fish.getName();
-        frog.getName();
+        turtle.getName();
+
+        cat.run();
+        duck.fly();
+        duck.run();
+        duck.swim();
+        fish.swim();
+        turtle.run();
+        turtle.swim();
     }
 }
