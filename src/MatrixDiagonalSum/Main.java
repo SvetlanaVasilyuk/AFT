@@ -42,5 +42,6 @@ public class Main {
         int[][] matrix = createRandomMatrix(N);
         printMatrix(matrix);
         System.out.println("Сумма элементов диагонали данной матрицы равна " + findMatrixDiagonalSum(matrix));
+
     }
 }

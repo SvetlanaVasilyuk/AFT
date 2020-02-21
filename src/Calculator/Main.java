@@ -9,10 +9,10 @@ public class Main {
     public static void main(String[] args) {
 
         //Демонстрация работы калькулятор для примитивов
-        int n1=123;
-        int n2=5;
-        double d1=11.999;
-        double d2=4.001;
+        int n1 = 123;
+        int n2 = 5;
+        double d1 = 11.999;
+        double d2 = 4.001;
 
         System.out.println(n1 + " + " + n2 + " = " + CalculatorForPrimitives.addition(n1, n2));
         System.out.println(n1 + " - " + n2 + " = " + CalculatorForPrimitives.substraction(n1, n2));

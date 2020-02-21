@@ -15,14 +15,6 @@ public class CalculatorForPrimitives {
     }
 
     public static double division(int n1, int n2) {
-        /*double result=0;
-        try {
-            result = (double)n1/(double)n2;
-        }
-        catch(ArithmeticException e){
-            System.out.println("Делить на ноль нельзя!");
-        }
-        return result;*/
         return (double) n1 / (double) n2;
     }
 
