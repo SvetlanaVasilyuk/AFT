@@ -127,7 +127,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int N = 10000;
+        int N = 1000;
 
         int[] array = fullArray(N);
 
