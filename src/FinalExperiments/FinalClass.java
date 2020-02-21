@@ -17,7 +17,7 @@ public final class FinalClass extends NotFinalClass {
     */
 
     //В следующем методе все скомпилируется
-    public void notFinalMethod(){
+    public void notFinalMethod() {
         this.finalMethod1();
         finalMethod2();
     }

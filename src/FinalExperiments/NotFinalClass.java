@@ -4,7 +4,7 @@ public class NotFinalClass {
     public final int finalField1 = 1;  // поле должно быть проинициализирован здесь
     public static final int finalField2 = 2; // поле должно быть проинициализирован здесь
 
-    public final void finalMethod1(){
+    public final void finalMethod1() {
         //Следующая строка не скомпилируется, так как поле finalField1 нельзя присвоить другое значение
         // this.finalField1 = 3;
 
@@ -15,7 +15,7 @@ public class NotFinalClass {
         System.out.println(finalField2); // Скомпилируется
     }
 
-    public static final void finalMethod2(){
+    public static final void finalMethod2() {
         // Следующие две строки не скомпилируются из-за того, что нельзя использовать this в static методе
         //System.out.println(this.finalField1);
         //System.out.println(this.finalMethod1);
