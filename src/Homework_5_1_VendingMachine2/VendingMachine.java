@@ -7,10 +7,6 @@ public class VendingMachine {
 
     private int cash;
 
-    private void setCash(int cash) {
-        this.cash = cash;
-    }
-
     private void printMenu() {
         System.out.println("Добро пожаловать! Ознакомьтесь с меню:");
         for (Drink d : Drink.values()) {
