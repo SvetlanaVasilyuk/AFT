@@ -1,4 +1,4 @@
-package Human;
+package Homework_5_4_Human;
 
 public class Man extends Human {
 
@@ -19,7 +19,7 @@ public class Man extends Human {
 
     @Override
     public void butterfly() {
-        System.out.println("Man can't swim butterfly");
+        System.out.println("Man can't swim butterfly!");
 
     }
 }
