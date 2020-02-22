@@ -1,25 +1,20 @@
-package VendingAutomate;
+package Homework_5_1_VendingMachine2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class VendingMachine {
 
-    private ArrayList <Drink> menu = new ArrayList<>();
     private int cash;
 
     private void setCash(int cash) {
         this.cash = cash;
     }
 
-    public void addDrinkToMenu(String name, int price) {
-        this.menu.add(new Drink(price, name));
-    }
-
     private void printMenu() {
         System.out.println("Добро пожаловать! Ознакомьтесь с меню:");
-        for (int i = 0; i < menu.size(); i++) {
-            System.out.println("Номер напитка: " + (i + 1) + "  Название: " + this.menu.get(i).getName() + "  Цена: " + this.menu.get(i).getPrice());
+        for (Drink d : Drink.values()) {
+            System.out.println("Номер напитка: " + (d.ordinal() + 1) + "  Название: " + d.getName() + "  Цена: " + d.getPrice());
         }
         System.out.println();
     }
@@ -37,16 +32,16 @@ public class VendingMachine {
         System.out.println("Введите номер выбранного напитка:");
         int number = scanner.nextInt();
         System.out.println();
-        if (number > menu.size() || number < 1) {
+        if (number > Drink.values().length || number < 1) {
             System.out.println("Введен некорректный номер напитка. Пожалуйста, попробуйте снова.");
             giveDrinkToUser();
-        } else if (this.menu.get(number - 1).getPrice() > this.cash) {
+        } else if (Drink.values()[number - 1].getPrice() > this.cash) {
             System.out.println("Недостаточно средств.");
             addCash();
             giveDrinkToUser();
         } else {
-            System.out.print("Пожалуйста, заберите ваш напиток " + this.menu.get(number - 1).getName());
-            int change = this.cash - this.menu.get(number - 1).getPrice();
+            System.out.print("Пожалуйста, заберите ваш напиток " + Drink.values()[number - 1].getName());
+            int change = this.cash - Drink.values()[number - 1].getPrice();
             if (change > 0) {
                 System.out.print(" и сдачу в размере " + change);
             }
