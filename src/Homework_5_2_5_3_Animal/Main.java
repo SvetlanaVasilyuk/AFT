@@ -1,4 +1,4 @@
-package Animal;
+package Homework_5_2_5_3_Animal;
 
 public class Main {
     public static void main(String[] args) {
